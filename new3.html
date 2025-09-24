@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Friday Group Chat</title>
+    <link rel="stylesheet" href="assignment_style.css">
+    <style>
+        /* ensure icons scale nicely */
+        .icon {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+
+        .back-btn img,
+        .incognito-btn img {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone-container">
+        <!-- Status bar -->
+        <div class="status-bar">
+            <span>9:41</span>
+            <div style="display: flex; align-items: center; gap: 6px;">
+                <img src="Wifi.svg" alt="Wifi" class="icon">
+                <img src="Network.svg" alt="Network" class="icon">
+                <img src="Battery.svg" alt="Battery" class="icon">
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="back-btn">
+                <img src="Back Arrow.svg" alt="Back" class="icon">
+            </div>
+            <div class="profile-pic"></div>
+            <div class="group-name">Fun Friday Group</div>
+            <div class="incognito-btn">
+                <img src="Incognito.svg" alt="Incognito" class="icon">
+            </div>
+        </div>
+
+        <!-- Chat messages -->
+        <div class="chat-container" id="chatContainer">
+            <div class="message received">
+                <div class="avatar user-avatar"></div>
+                <div>
+                    <div class="sender-name">Anonymous</div>
+                    <div class="message-bubble">Someone order Bornvital!</div>
+                    <div class="message-time">11:35 AM</div>
+                </div>
+            </div>
+
+            <div class="message received">
+                <div class="avatar user-avatar"></div>
+                <div>
+                    <div class="sender-name">Anonymous</div>
+                    <div class="message-bubble">hahahahah!!</div>
+                    <div class="message-time">11:38 AM</div>
+                </div>
+            </div>
+
+            <div class="message received">
+                <div class="avatar user-avatar"></div>
+                <div>
+                    <div class="sender-name">Anonymous</div>
+                    <div class="message-bubble">I'm Excited For this Event! Ho-Ho</div>
+                    <div class="message-time">11:56 AM</div>
+                </div>
+            </div>
+
+            <div class="message sent">
+                <div>
+                    <div class="message-bubble">
+                        Hi Guysss 👋
+                        <span class="checkmark">✓✓</span>
+                    </div>
+                    <div class="message-time">12:31 PM</div>
+                </div>
+            </div>
+
+            <div class="message received">
+                <div class="avatar user-avatar online"></div>
+                <div>
+                    <div class="sender-name">Anonymous</div>
+                    <div class="message-bubble">Hello!</div>
+                    <div class="message-time">12:35 PM</div>
+                </div>
+            </div>
+
+            <div class="message received">
+                <div class="avatar user-avatar"></div>
+                <div>
+                    <div class="sender-name">Anonymous</div>
+                    <div class="message-bubble">Yessss!!!!!!!</div>
+                    <div class="message-time">12:42 PM</div>
+                </div>
+            </div>
+
+            <div class="message sent">
+                <div>
+                    <div class="message-bubble">
+                        Maybe I am not attending this event!
+                        <span class="checkmark">✓✓</span>
+                    </div>
+                    <div class="message-time">1:36 PM</div>
+                </div>
+            </div>
+
+            <div class="message received">
+                <div class="avatar user-avatar" style="background: linear-gradient(45deg, #4CAF50, #45a049);"></div>
+                <div>
+                    <div class="sender-name">Abhay Shukla</div>
+                    <div class="message-bubble">We have Surprise For you!!</div>
+                    <div class="message-time">11:35 AM</div>
+                </div>
+            </div>
+
+            <div class="anonymous-notice">
+                🕶 Now you're appearing as Anonymous! 🕶
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator">
+                Someone is typing<span class="typing-dots">...</span>
+            </div>
+        </div>
+
+        <!-- Input -->
+        <div class="input-container">
+            <input type="text" class="message-input" id="messageInput" placeholder="Type a message ..." />
+            <div class="input-actions">
+                <button class="action-btn">
+                    <img src="Camera.svg" alt="Camera" class="icon">
+                </button>
+                <button class="action-btn">
+                    <img src="Attachments.svg" alt="Attachment" class="icon">
+                </button>
+            </div>
+            <button class="send-btn" id="sendBtn">
+                <img src="Send Button.svg" alt="Send" class="icon">
+            </button>
+        </div>
+    </div>
+
+    <script src="new.js"></script>
+
+</body>
+
+</html>
